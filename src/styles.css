@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #008484, #017c68, #0e7b6b, #097064);
+    background: linear-gradient(-45deg, #134e4a, #017c68, #0e7b6b, #097064);
     background-size: 400% 400%;
     color: white;
     text-align: center;
@@ -94,12 +94,13 @@ p {
     justify-content: center;
     gap: 20px;
     animation: fadeIn 2s ease-in-out 1s;
+    flex-wrap: wrap;
 }
 
 .button {
     background: linear-gradient(45deg, #00d1b2, #00bfa5);
     color: white;
-    padding: 15px 30px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 25px;
     font-size: 1em;
@@ -107,6 +108,8 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    min-width: 120px;
+    text-align: center;
 }
 
 .button::before {
@@ -145,4 +148,66 @@ main {
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
 }
