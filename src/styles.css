@@ -43,7 +43,7 @@ body::before {
 .logo {
     width: 120px;
     height: 120px;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
     transition: all 0.5s ease;
     display: flex;
